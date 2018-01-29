@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Tools</title>
+        
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <!--Scripts-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.mobile.min.js"></script>
+        <script src="../cordova.js"></script>
+        
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="../css/jquery.mobile.min.css"/>
+        <link rel="stylesheet" href="../css/kadpoly.min.css"/>
+        <link rel="stylesheet" href="../css/custom.css"/>
+        
+    </head>
+    <body>
+        <!--Page: Student Tools-->
+        <div data-role="page" id="student_tools" data-theme="b">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#"
+                    data-rel="back"
+                    rel="external"
+                    data-icon="carat-l"
+                    class="ui-btn-left">Back</a>
+                <h1>Student Tools</h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <!--Student Portal Link-->
+                    <li>
+                        <a href="#" onClick="window.open('http://www.kadunapolytechnic.com','_blank','location=yes');return false;">Student Portal</a>
+                    </li>
+                    <!--GPA Calculator Link-->
+                    <li>
+                        <a href="gpa_calculator.html" rel="external">GPA Calculator</a>
+                    </li>
+                    <!--Academic Calendar Link-->
+                    <li>
+                        <a href="#" onClick="window.open('http://www.kadunapolytechnic.com','_blank','location=yes');return false;">Academic Calendar</a>
+                    </li>
+                </ul>
+            </div>
+    	</div><!--Page-->
+    </body>
+</html>

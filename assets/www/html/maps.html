@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map</title>
+        
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <!--Scripts-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.mobile.min.js"></script>
+        <script src="../cordova.js"></script>
+        
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="../css/jquery.mobile.min.css"/>
+        <link rel="stylesheet" href="../css/kadpoly.min.css"/>
+        <link rel="stylesheet" href="../css/custom.css"/>
+        
+    </head>
+    <body>
+        <!--Page: Campus Map-->
+        <div data-role="page" id="student_tools" data-theme="b">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#"
+                    data-rel="back"
+                    rel="external"
+                    data-icon="carat-l"
+                    class="ui-btn-left">Back</a>
+                <h1>Map</h1>
+            </div>
+            <div data-role="content">
+              <ul data-role="listview" data-inset="true">
+                <!--CST Main Campus Google Map Link-->
+                <li>
+                    <a href="geo:10.521688,7.414653" data-transition="slide">Kaduna Polytechnic Main Campus (CST) Map</a>
+                </li>
+                <!--Kaduna Polytechnic Campus Google Map Link-->
+                <li>
+                    <a href="geo:10.5209668,7.4406966" data-transition="slide">Business & Management Studies Campus (CBMS) Map</a>
+		
+                </li>
+                <!--Get Directions Link-->
+                <li>
+                    <a href="directions_map.html" data-transition="slide">Get Directions</a>
+                </li>
+              </ul>
+            </div>
+		</div><!--Page-->
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+   <head>
+		<title>Get Directions</title>
+		<!--Meta-tags-->
+		<meta charset="utf-8" />
+		<meta http-equiv="content-language" content="en" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		
+		<!--Scripts-->
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mobile.min.js"></script>
+		<script src="../cordova.js"></script>
+		
+		<!--Stylesheets-->
+        <link type="text/css" rel="stylesheet" href="../css/jquery.mobile.min.css" />
+        <link type="text/css" rel="stylesheet" href="../css/kadpoly.min.css" />
+    </head>
+    <body>
+		
+		<!--Page: Directions Map-->
+		<div id="directions_map" data-role="page" data-theme="b">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<h1>Get Directions</h1>
+				<a href="#"
+					data-rel="back"
+					rel="external"
+		            data-icon="carat-l"
+		            data-direction="reverse"
+		            class="ui-btn-left">Back</a>
+			</div>
+			<div data-role="content">	
+				<form action="http://maps.google.com/maps" method="get" target="_blank">
+					Enter your starting address:
+					<input type="text" name="saddr" />
+					<input type="hidden" name="daddr" value="Kaduna Polytechnic, Kaduna, Nigeria" />
+					<input type="submit" value="Get Directions" />
+				</form>
+			</div>
+		</div><!--Page-->
+
+	</body>
+</html>

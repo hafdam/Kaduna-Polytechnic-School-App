@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Home</title>
+      <!-- Meta-tags -->
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+
+      <!--StyleSheets-->
+      <link rel="stylesheet" type="text/css" href="css/jquery.mobile.min.css">
+      <link rel="stylesheet" type="text/css" href="css/kadpoly.min.css">
+      <link rel="stylesheet" href="css/custom.css" />
+
+      <!--JavaScript-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.mobile.min.js"></script>
+      <script type="text/javascript" src="cordova.js"></script>      
+  </head>
+  <body>
+      <!--Page: HomePage-->
+      <div id="home" data-role="page" data-theme="b">
+
+      <!--Header-->
+        <div data-role="header">
+          <h1></h1>
+		    <a href="#" class="ui-btn ui-btn-inline ui-btn-b ui-icon-action ui-btn-icon-notext ui-btn-right" onclick="window.plugins.socialsharing.share('Download The Official Mobile App of Kaduna Polytechnic, Kaduna, Nigeria',
+                                  null,
+                                  null,
+                                  'https://play.google.com/store/apps/details?id=ng.edu.kadunapolytechnic')"></a>	
+        </div>
+		
+		<!--Content-->
+        <div data-role="content">
+          <img id="kadpoly logo" src="images/logos.png">
+		  <h2 style="font-family:times, serif; alignment:center">Kaduna Polytechnic</h2>
+		  
+          
+			 <p style="font-family:times, font-size:10pt, alignment:center"><i>...scholarly excellence,intellectual integrity, and academic freedom</i></p>
+			 <br>
+			 <br>
+			 
+          <div class="ui-grid-a grids ui-controlgroup">
+            <!--Block: Discover Kaduna Polytechnic-->
+           <div class="ui-block-a">
+              <a href="html/kadpoly.html" data-transition="slide" rel="external">
+                 <img src="images/logos.png">
+                 <p style="font-family: times, serif; font-size:12pt;">Discover Kaduna Polytechnic</p>
+              </a>
+           </div>
+           <!--Block: Apply Now-->
+           <div class="ui-block-b">
+              <a href="#" onClick="window.open('http://www.kadunapolytechnic.edu.ng/new/online-application/','_blank','location=yes');return false;">
+                 <img src="images/greece.png">
+                 <p style="font-family: times, serif; font-size:12pt;">Apply Now</p>
+              </a>
+           </div>
+           <!--Block: Student Tools-->
+           <div class="ui-block-a">
+              <a href="html/student_tools.html" data-transition="slide">
+                 <img src="images/stud.png">
+                 <p style="font-family: times, serif; font-size:12pt;">Student Tools</p>
+              </a>
+           </div>
+           <!--Block: Map-->
+           <div class="ui-block-b">
+              <a href="html/maps.html" data-transition="slide" rel="external">
+                 <img src="images/loction.png">
+                 <p style="font-family: times, serif; font-size:12pt;">Map</p>
+              </a>
+           </div>
+           <!--Block: Hot-Line-->
+           <div class="ui-block-a">
+              <a href="html/hotline.html" data-transition="slide" rel="external">
+                 <img src="images/hl.png">
+                 <p style="font-family: times, serif; font-size:12pt;">HOT-Line</p>
+              </a>
+           </div>
+           <!--Block: Get Help-->
+		    <div class="ui-block-b">
+              <a href="html/contacts.html"  data-transition="slide">
+                 <img src="images/phone.png">
+                 <p style="font-family: times, serif; font-size:12pt;">Get Help</p>
+              </a>
+           </div>
+           <!--Block: Social News-->
+           <div class="ui-block-a">
+              <a href="html/news.html" data-transition="slide">
+                 <img src="images/sm.png">
+                 <p style="font-family: times, serif; font-size:12pt;">Social News</p>
+              </a>
+           </div>
+           <!--Block: About App-->
+		   <div class="ui-block-b">
+              <a href="html/about.html"  data-transition="slide">
+                 <img src="images/infor.png">
+                 <p style="font-family: times, serif; font-size:12pt;">About App</p>
+              </a>
+           </div>
+           
+        </div>
+      </div>
+
+    </div><!--Page-->
+    
+  </body>
+</html>

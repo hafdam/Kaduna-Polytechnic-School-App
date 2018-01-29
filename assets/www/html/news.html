@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Social News</title>
+        
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <!--Scripts-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.mobile.min.js"></script>
+        <script src="../cordova.js"></script>
+        
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="../css/jquery.mobile.min.css"/>
+        <link rel="stylesheet" href="../css/kadpoly.min.css"/>
+        <link rel="stylesheet" href="../css/custom.css"/>
+        
+    </head>
+    <body>
+        <!--Page: News-->
+        <div data-role="page" id="news" data-theme="b">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#"
+                    data-rel="back"
+                    rel="external"
+                    data-icon="carat-l"
+                    class="ui-btn-left">Back</a>
+                <h1>Social News</h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <!--Facebook Link-->
+                    <li>
+                        <a href="#" onClick="window.open('http://facebook.com/kadunapolytechnic','_blank','location=yes');return false;">Facebook</a></li>
+                    <!--Twitter Link-->
+                    <li>
+                        <a href="#" onClick="window.open('edit_Twitter.html','_blank','location=yes');return false;">Twitter</a></li>
+                </ul>
+            </div>
+		</div><!--Page-->
+    </body>
+</html>

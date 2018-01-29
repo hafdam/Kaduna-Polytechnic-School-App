@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About App</title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!--Scripts-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.mobile.min.js"></script>
+        <script src="../js/rate_app.js"></script>
+        <script src="../cordova.js"></script>
+        
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="../css/jquery.mobile.min.css"/>
+        <link rel="stylesheet" href="../css/kadpoly.min.css"/>
+        <link rel="stylesheet" href="../css/custom.css"/>
+    </head>
+    <body>
+        <!--Page: About-->
+        <div data-role="page" id="about" data-theme="b">
+
+            <!--Header-->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>About App</h1>
+                <a href="#"
+                    data-rel="back"
+                    rel="external"
+                    data-icon="carat-l"
+                    class="ui-btn-left">Back</a>
+            </div>
+
+            <!--Content-->
+            <div data-role="content">
+                <div align="center">
+                    <img src="../images/logos.png">
+                </div>
+                <!--Application Name Section-->
+                <h3>Application Name</h3>
+                <hr class="caption">
+                <p>Kaduna Polytechnic</p>
+
+                <!--Application Version Section-->
+                <h3>Application Version</h3>
+                <hr class="caption">
+                <p>1.0</p>
+
+                <!--Homepage Section-->
+                <h3>Homepage</h3>
+                <hr class="caption">
+                <p><a href="#">http://www.kadunapolytechnic.edu.ng</a></p>
+                
+                <!--Developer Section-->
+				<h3>Development</h3>
+				<hr class="caption">
+				<p>Lead Developer: Yakubu Adam Hafsat
+                    <a href="#" onClick="window.open('http://twitter.com/hafadam','_system','location=yes');return false;">@hafadam</a>
+                </p>
+                <p>Support: Yaqub Mahmoud(Captain360)
+                    <a href="#" onClick="window.open('http://twitter.com/Yaqub320','_system','location=yes');return false;">@yaqub320</a>
+                </p>
+
+                <!--Copyrights Section-->
+                <h3>Copyrights</h3>
+                <hr class="caption">
+                <p>Copyrights &copy; 2018. All Rights Reserved</p>
+                
+                <!--Send Feedback Section-->
+				<h3>Send Feedback</h3>
+				<hr class="caption">
+				<p>For Suggestions on App Improvement</p>
+				<p>
+                    <a href="tel:+2348034888637">Phone: +234 8034888637</a> OR <a href="tel:+2348169690015">+234 8169690015</a>
+                </p>
+				<p>
+                    <a href="mailto:hafsatadam0204@gmail.com">Email: hafsatadam0204@gmail@gmail.com</a> OR <a href="mailto:yaqub320@gmail.com">yaqub320@gmail.com</a>
+                </p>
+
+                <!--Disclaimer Section-->
+                <h3>Disclaimer</h3>
+                <hr class="caption">
+                <div data-role="collapsible">
+                    <h4>Disclaimer</h4>
+                    <p>Every effort has been made to ensure the accuracy of the published course information, however the programmes are subject to ongoing review and development. Changing circumstances may necessitate alteration to, or the cancellation of, courses.</p>
+                    <p>You are advised to contact the admissions department before proceeding with any applications.</p>
+                </div>
+            </div>
+		</div><!--Page-->
+
+    </body>
+</html>

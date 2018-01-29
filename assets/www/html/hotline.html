@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hotline</title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!--Scripts-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.mobile.min.js"></script>
+        <script src="../cordova.js"></script>
+
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="../css/jquery.mobile.min.css"/>
+        <link rel="stylesheet" href="../css/kadpoly.min.css"/>
+        <link rel="stylesheet" href="../css/custom.css"/>
+		<style>
+		
+		.ui-page-theme-g {
+				font-weight: bold;
+				color:green ;
+				background-image: url("../banner/30.png");
+				}
+			.ui-header,
+			.ui-footer{
+			
+			background-color:#006837;
+			color:green ;
+			}
+			
+			div.p1 {
+			border-radius: 9px;
+			border: 1px solid ;
+			background-color:white;
+			color: ;
+				}
+			
+			.ui-header,
+			.ui-footer{
+			background-image: url("../banner/a11.png");
+			background-color:;
+			color:green ;
+			}
+		</style>
+		
+	</head>
+	<body >	
+		<!--Page: HomePage-->
+		<div data-role="page" id="p1" data-theme="g">
+			
+			<!--Header-->
+			<div data-role="header" data-position="fixed"data-theme="a">
+				<center><img src="../banner/2.png" class="img-cycle" height="0%" width="50%"></center>
+				
+			</div><!-- /header -->
+			
+			
+			<!--Page Content-->
+			<div data-role="main" class="ui-content" data-theme="">
+				<br>		
+				<center><img src="../banner/stdnt.png" class="img-thumbnail" height="100%" width="100%"> </center>
+				<br>
+				
+				<div class="p1">		
+					<center>
+						<!--Grid-->
+						<div class="ui-grid-b p1 ">
+							<div class="ui-block-a"><a href="#p2"data-transition="slide" class="ui-shadow ui-btn ui-corner-all"><img src="../images/2.png" class="img-cycle" height="00%" width="100%"><br></a></div>
+							<div class="ui-block-b"><a href="#p3" data-transition="slide" class="ui-shadow ui-btn ui-corner-all"><img src="../images/3.png" class="img-thumbnail" height="00%" width="100%"><br></a></div>
+							<div class="ui-block-c"><a href="#p5" data-transition="slide" class="ui-shadow ui-btn ui-corner-all"><img src="../images/6.png" class="img-thumbnail" height="00%" width="100%"><br></a></div>
+							<div class="ui-block-a"><a href="#p6" data-transition="slide" class="ui-shadow ui-btn ui-corner-all"><img src="../images/1.png" class="img-thumbnail" height="100%" width="100%"><br></a></div> 
+							<div class="ui-block-b"><a href="#p7"  data-transition="slide"  class="ui-shadow ui-btn ui-corner-all" ><img src="../images/5.png" class="img-thumbnail" height="00%" width="100%"><br></a></div>
+							<div class="ui-block-c"><a href="#" onClick="window.open('../index.html','_blank','location=yes');return false;" data-transition="slide" class="ui-shadow ui-btn ui-corner-all" ><img src="../images/11.png" class="img-thumbnail" height="100%" width="100%"><br></a></div>
+						</div>	
+					</center>
+				</div>
+			</div><!--End:Page Content-->
+			
+			<!--Footer-->
+			<div data-role="footer" data-theme="a" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+
+				<h6>&copy; Hafadam 2016</h6>
+		
+			
+			</div><!-- /footer -->
+		
+		</div> <!--End: HomePage-->
+		 
+		 
+		<!--page: Taxi-->
+		<div data-role="page" id="p2" data-theme="g">
+			<!--Header-->
+			<div data-role="header" data-theme="a" data-position="fixed"> 	
+				<center><img src="../banner/2.png" class="img-cycle" height="0%" width="50%"></center>
+				<a href="#p1" data-transition="slide" class="ui-btn ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-notext">back</a>
+				
+			</div><!--End: Header-->
+			
+			<!--Content-->
+			<div data-role="main" class="ui-content " > 
+				<center>				
+					<a href="#"><img src="../banner/taxi.png" class="img-thumbnail" height="" width="80%"></a>
+				</center>
+			
+		
+				<ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-inset="true" style="font-family: times, serif; font-size:12pt; font-style:italic">
+					<li>
+						<a href="#ta" data-rel="popup" data-position-to="window" data-transition="pop"><p><font color="">Alfa Taxi </font></p></a>
+						<a href="#t1" data-theme="b" data-transition="slide" data-icon="user" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					<li>
+						<a href="#tb"data-rel="popup" data-position-to="window" data-transition="pop"><p ><font color="">Abiamo Taxi</font></p></a>
+						<a href="#t1" data-theme="b" data-transition="slide" data-icon="user" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					<li>
+						<a href="#tc" data-rel="popup" data-position-to="window" data-transition="pop"><p><font color="">BJ Taxi</font></p></a>
+						<a href="#t1" data-theme="b" data-transition="slide" data-icon="user" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+				</ul>
+				<ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-inset="true" style="font-family: times, serif; font-size:12pt; font-style:italic">
+					<li>
+						<a href="#td" data-rel="popup" data-position-to="window" data-transition="pop"><p><font color="">Ibrahim BIKE</font></p></a>
+						<a href="#t1" data-theme="b" data-transition="slide" data-icon="user"data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					<li>
+						<a href="#te" data-rel="popup" data-position-to="window" data-transition="pop"><p ><font color="">Muhammad BIKE</font></p></a>
+						<a href="#t1" data-theme="b" data-transition="slide" data-icon="user"data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					
+				</ul>
+				<!--popup-->
+				<div data-role="popup" id="ta" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:10pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Alfa Taxi</p>
+					<p style="font-family: times, serif; font-size:13pt;" >08064879171</p>
+					<a href="tel:+2348064879171" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2348064879171" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+				
+				<div data-role="popup" id="tb" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:10pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Abiamo Taxi</p>
+					<p style="font-family: times, serif; font-size:13pt;">08163037254</p>
+					<a href="tel:+2348163037254"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call </a>
+					<a href="sms:+2348163037254" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+				
+				<div data-role="popup" id="tc" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:10pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>BJ Taxi</p>
+					<p style="font-family: times, serif; font-size:13pt;">08134613300</p>
+					<a href="tel:+2348134613300"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2348134613300" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+				
+				<div data-role="popup" id="td" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:10pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Bike Man (ibrahim)</p>
+					<p style="font-family: times, serif; font-size:13pt;">07053644409</p>
+					<a href="tel:+2347053644409"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2347053644409" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+								
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				
+				</div>
+				<div data-role="popup" id="te" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:10pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Bike Man (muhammed)/p>
+					<p style="font-family: times, serif; font-size:13pt;">08160924088</p>
+					<a href="tel:+2348160924088"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2348160924088" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+								
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				
+				</div>
+			
+			</div>			
+			<!--End:popup-->
+
+		</div>
+		<!--End: page Taxi-->   
+		
+		
+		<!--Page: Food Delivery-->
+		<div data-role="page" id="p3" data-theme="g">
+			<!--Header-->
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<center><img src="../banner/2.png" class="img-cycle" height="0%" width="50%"></center>
+				<a href="#p1"  data-transition="slide" class="ui-btn ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-notext">back</a>
+			
+			</div>
+			
+			<!--Page Content-->
+			<div data-role="main" class="ui-content " data-theme="a">
+					
+				<center><a href="#"><img src="../banner/food.png" class="img-thumbnail" height="" width="100%"> </a><center>
+		
+				
+				<ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-inset="true"style="font-family: times, serif; font-size:12pt; font-style:italic">
+					<li>
+						<a href="#food1" data-rel="popup" data-position-to="window" data-transition="pop"><p>Call Adegun</p></a>
+						<a href="#f1" data-position-to="window" data-icon="shop" data-transition="slide" data-transition="pop">Purchase album</a>
+					</li>
+					<li>
+						<a href="#food2"data-rel="popup" data-position-to="window" data-transition="pop"><p>Call Shola</p></a>
+						<a href="#f1" data-theme="b" data-position-to="window" data-icon="shop" data-transition="slide" d>Purchase album</a>
+					</li>
+					<li>
+						<a href="#food3" data-rel="popup" data-position-to="window" data-transition="pop"><p>Call (ibrahim) Albarka</p></a>
+						<a href="#f1" data-theme="b" data-transition="slide" data-icon="shop" data-position-to="window" >Purchase album</a>
+					</li>
+					<li>
+						<a href="#food4" data-rel="popup" data-position-to="window" data-transition="pop"><p>Call Chronides Pizza</p></a>
+						<a href="#f1" data-theme="b" data-transition="slide" data-icon="shop" data-position-to="window" >Purchase album</a>
+					</li>
+				</ul>
+				
+			</div><!--End:Content-->
+		  
+			<div data-role="popup" id="food1" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Adegun<br>+2347032766062</p>
+					<a href="tel:+2347032766062" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2347032766062" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			</div>
+				
+			<div data-role="popup" id="food2" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p> Shola<br>+2348137636189</p>
+					<a href="tel:+2348137636189" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call </a>
+					<a href="sms:+2348137636189" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			</div>
+				
+			<div data-role="popup" id="food3" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Albarka(Ibrahim)<br>+2348137636186</p>
+					<a href="tel:+2348137636186"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2348137636186" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			</div>
+				
+			<div data-role="popup" id="food4" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Chronides Pizza<br>+2348146646425</p>
+					<a href="tel:+2348146646425"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2348146646425" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+								
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				
+			</div>		
+		</div><!--End: Food Delivery-->
+		
+		<!--page: laundary-->
+		<div data-role="page" id="p5" data-theme="g">
+			<!--Header-->
+			<div data-role="header" data-theme="a" data-position="fixed"> 	
+			<center><img src="../banner/2.png" class="img-cycle" height="0%" width="50%"></center>
+				<a href="#p1"  data-transition="slide" class="ui-btn ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-notext">back</a>
+				
+			</div><!--End: Header-->
+			
+			<!--Content-->
+			<div data-role="main" class="ui-content " > 
+				<center><a href="#"><img src="../banner/laundry.png" class="img-thumbnail" height="" width="100%"> </a></center>
+					
+		
+				<ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-inset="true"style="font-family: times, serif; font-size:12pt; font-style:italic">
+					<li>
+						<a href="#a" data-rel="popup" data-position-to="window" data-transition="pop"><p >I.G.I.T</p></a>
+						<a href="#l1" data-theme="b" data-transition="slide" data-icon="user" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					<li>
+						<a href="#b"data-rel="popup" data-position-to="window" data-transition="pop"><p>DOS TYVIAN</p></a>
+						<a href="#l1" data-theme="b" data-transition="slide" data-icon="user" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					 <li>
+						<a href="#c" data-rel="popup" data-position-to="window" data-transition="pop"><p>MANDATE</p></a>
+						<a href="#l1" data-theme="b" data-transition="slide" data-icon="user" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					
+				</ul>
+			
+				<!--popup-->
+			
+				<div data-role="popup" id="a" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+						<p>I.G.I.T<br>+2348105635760<br>+2348033972508</p>
+						<a href="tel:+2348105635760" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+						<a href="sms:+2348033972508" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+					
+				<div data-role="popup" id="b" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+						<p style="font-family: times, serif; font-size:13">DOS TYVIAN<br>+2348062604863<br>+234705573190</p>
+						<a href="tel:+2348062604863"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call </a>
+						<a href="sms:+2348062604863" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+					
+				<div data-role="popup" id="c" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>MANDATE<br>+2348033177420</p>
+						<a href="tel:+2348033177420"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+						<a href="sms:+2348033177420" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+						<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+					
+				
+			</div>	
+
+		</div> <!--End: page laundry-->  
+	 
+		
+		<!--page: Agent-->
+		<div data-role="page" id="p6" data-theme="g">
+				<!--Header-->
+			<div data-role="header" data-theme="a" data-position="fixed"> 	
+				<center><img src="../banner/2.png" class="img-cycle" height="0%" width="50%"></center>
+				<a href="#p1"  data-transition="slide" class="ui-btn ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-notext">back</a>
+					
+			</div><!--End: Header-->
+				
+				<!--Content-->
+			<div data-role="main" class="ui-content "data-theme="a" > 
+				<center><a href="#"><img src="../banner/agent.png" class="img-thumbnail" height="" width="100%"> </a></center>
+				
+				<ul data-role="listview" data-split-icon="plus" data-theme="a" data-split-theme="b" data-inset="true" style="font-family: times, serif; font-size:12pt; font-style:italic" >
+					<li>
+						<a href="#aa" data-rel="popup" data-position-to="window" data-transition="pop"><p>Agent 1</p></a>
+						<a href="#a1" data-theme="b" data-transition="slide" data-icon="home" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					<li>
+						<a href="#ab"data-rel="popup" data-position-to="window" data-transition="pop"><p >Agent 2</p></a>
+						<a href="#a1" data-theme="b" data-transition="slide" data-icon="home" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+					 <li>
+						<a href="#ac" data-rel="popup" data-position-to="window" data-transition="pop"><p>Agent 3</p></a>
+						<a href="#a1" data-theme="b" data-transition="slide" data-icon="home" data-position-to="window" data-transition="pop">Purchase album</a>
+					</li>
+				
+				</ul>
+				<!--popup-->
+				<div data-role="popup" id="aa" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Agent 1</p>
+					<p style="font-family: times, serif; font-size:13pt;" >08038369404</p>
+					<a href="tel:+2348038369404" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2348038369404" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+				
+				<div data-role="popup" id="ab" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Agent 2</p>
+					<p style="font-family: times, serif; font-size:13pt;">08035328038</p>
+					<a href="tel:+2348035328038"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call </a>
+					<a href="sms:+2348035328038" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+				
+				<div data-role="popup" id="ac" data-theme="a" data-overlay-theme="b" class="ui-content ui-mini" style="font-family: times, serif; font-size:12pt; font-style:italic max-width:340px; padding-bottom:2em;">
+					<p>Agente 3</p>
+					<p style="font-family: times, serif; font-size:13pt;">08168917427</p>
+					<a href="tel:+2348168917427"  class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-phone ui-btn-icon-left ui-btn-inline ui-mini">Call</a>
+					<a href="sms:+2348168917427" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-mail ui-btn-icon-left ui-btn-inline ui-mini">Message</a>
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				</div>
+				
+			</div>
+		</div> <!--end: page agent-->
+		
+		
+		<!--page: Emergency-->
+		<div data-role="page" id="p7" data-theme="g">
+				<!--Header-->
+			<div data-role="header" data-theme="a" data-position="fixed"> 	
+				 <center><img src="../banner/2.png" class="img-cycle" height="0%" width="50%"></center>
+				<a href="#p1"  data-transition="slide" class="ui-btn ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-notext">back</a>
+			</div><!--End: Header-->
+			
+				<!--Content-->
+			<div data-role="main" class="ui-content "data-theme="a" > 
+				<center><a href="#"><img src="../banner/au.png" class="img-thumbnail" height="" width="90%"> </a></center>		
+				<center>
+					<p style="font-family: times, serif; font-color:blue font-size:7pt;" class="ui-bar ui-bar-a ui-corner-all"><font color="black">Emergency Call Only</font></p>
+				</center>
+				<ol data-role="listview" data-theme="a" data-inset="true" class="ui-alt-icon">
+					<li  data-icon="phone"><a href="#">School CSO</a></li>
+					<li data-icon="phone"><a href="#">School Clinic</a></li>
+					<li data-icon="phone"><a href="#">School Ambulance</a></li>
+				</ol>
+			</div> <!--End:Content-->
+			   
+		</div> <!--End: page Emergency--> 	
+	 
+		
+		<!--page: twitter-->
+		
+		<div data-role="page" id="p8" data-theme="">
+				<!--Header-->
+			<div data-role="header" data-theme="a" data-position="fixed"> 
+				<center><img src="../banner/2.png" class="img-cycle" height="0%" width="50%"></center>
+				<img src="../banner/twitter.png"  class="img-cycle" height="0%" width="30%">
+				<a href="#p1"  data-transition="slide" class="ui-btn ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-notext">back</a>
+			</div><!--End: Header-->
+				
+			<!--Content-->
+			<div data-role="main" class="ui-content "data-theme="a" >
+				<FORM ><INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh"></FORM>
+			</div>
+			<script>
+					window.twttr = (function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0],
+						t = window.twttr || {};
+					  if (d.getElementById(id)) return t;
+					  js = d.createElement(s);
+					  js.id = id;
+					  js.src = "https://platform.twitter.com/widgets.js";
+					  fjs.parentNode.insertBefore(js, fjs);
+					 
+					  t._e = [];
+					  t.ready = function(f) {
+						t._e.push(f);
+					  };
+					 
+					  return t;
+					}(document, "script", "twitter-wjs"));
+			</script>
+
+				<a class="twitter-timeline" href="https://twitter.com/dit_echo"></a> 
+				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>	
+					
+		</div>			
+		
+		
+				
+		
+</body>
+</html>

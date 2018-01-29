@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GPA Calculator</title>
+
+        <meta charset="utf-8"/>
+        <meta name="description" content="Calculate GPA on a 5.0 scale">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!--Scripts-->
+        <script>
+        var Invalid = -1000;
+
+        //Update the credits and GPA fields.
+        function updateCreditsGpa() {
+            if (document.getElementById) {
+                var tbody = document.getElementById("classes_tbody");
+                var elements = tbody.getElementsByTagName("input");
+                updateCreditsGpaWith(elements);
+            }
+            else {
+                updateCreditsGpaWith(document.classes.elements);
+            }
+        }
+
+        //Insert the input fields for a new class
+        //into the table.
+        function addNewClass() {
+            var tbody = document.getElementById("classes_tbody");
+            var newTr = document.createElement("tr");
+            for (var i = 0; i < 3; ++i) {
+                var td = document.createElement("td");
+                var div = document.createElement("div");
+                var input = document.createElement("input");
+                input.size = "9";
+                if (i != 0) {
+                    input.setAttribute("onchange", "updateCreditsGpa()");
+                }
+                div.setAttribute("class", "ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset");
+                div.appendChild(input)
+                td.appendChild(div);
+                newTr.appendChild(td);
+            }
+            tbody.appendChild(newTr);
+        }
+
+
+        //Convert the given float to a string of the closest
+        //float with two or fewer places after the decimal.
+        function formatDecimal(aFloat) {
+            var digits = "" + Math.round(100 * aFloat);
+            var length = digits.length;
+            if (length < 3) {
+                return "0." + digits;
+            }
+            else {
+                var dp = length - 2;
+                return digits.substring(0, dp) + "." + digits.substring(dp, length);
+            }
+        }
+
+        //Return the char of aString at index.
+        //If index is invalid, the results are undefined.
+        function charAt(aString, index) {
+            var length = aString.length;
+            return aString.substring(index, index + 1);
+        }
+
+        //Convert the given string to a float or return Invalid
+        //if the given input is not recognized as credit hours.
+        function toFloatOrInvalid(input) {
+            var length = input.length;
+            if (length == 0) {
+                return Invalid;
+            }
+            var first = charAt(input, 0);
+            if (first == "0") {
+                if (length == 1) {
+                    return 0.0;
+                }
+                else if (charAt(input, 1) != ".") {
+                    return Invalid;
+                }
+            }
+            else if ("123456789".indexOf(first) == -1) {
+                return Invalid;
+            }
+            var i = 1;
+            for (; i < length; ++i) {
+                var m = ".0123456789".indexOf(charAt(input, i));
+                if (m == -1) {
+                    return Invalid;
+                }
+                else if (m == 0) {
+                    break;
+                }
+            }
+            for (var j = i + 1; j < length; j++) {
+                if ("0123456789".indexOf(charAt(input, j)) == -1) {
+                    return Invalid;
+                }
+            }
+            return parseFloat(input);
+        }
+
+        function updateCreditsGpaWith(elements) {
+            var totalGradedCredits = 0;
+            var totalUngradedCredits = 0;
+            var totalPoints = 0;
+
+            var haveAtLeastOneGrade = false;
+
+            var length = elements.length;
+            for (var i = 0; i < length; i += 3) {
+                var letter = elements[i + 2].value.toUpperCase();
+
+                var creditsString = elements[i + 1].value;
+                if (creditsString == "") {
+                    continue;
+                }
+
+                var credits = toFloatOrInvalid(creditsString);
+                if (credits == Invalid) {
+                    alert('"' + creditsString + '" is not a number');
+                    return;
+                }
+                else {
+                    totalGradedCredits += credits;
+                }
+
+                if (letter == "") {
+                    continue;
+                }
+                var points = letterToPoints(letter);
+                if (points == Invalid) {
+                    alert('"' + letter + '" is not a letter grade');
+                    return;
+                }
+                haveAtLeastOneGrade = true;
+
+                totalPoints += credits * points;
+            }
+            document.results.total_credits.value = totalGradedCredits + totalUngradedCredits;
+            if (haveAtLeastOneGrade && totalGradedCredits > 0) {
+                document.results.gpa.value = formatDecimal(totalPoints / totalGradedCredits);
+            }
+            else {
+                document.results.gpa.value = "";
+            }
+        }
+
+        //Return the points corresponding to the given letter
+        //grade or Invalid if the input is invalid. The grade
+        //is expected to be capitalized: A, B, etc.
+        function letterToPoints(grade) {
+            if ("A" == grade) {
+                return 5.0;
+            }
+            else if ("B" == grade) {
+                return 4.0;
+            }
+            else if ("C" == grade) {
+                return 3.0;
+            }
+            else if ("D" == grade) {
+                return 2.0;
+            }
+            else if ("F" == grade) {
+                return 0.0;
+            }
+            else {
+                //XXX! Should we throw an exception here?
+                return Invalid;
+            }
+        }
+        </script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.mobile.min.js"></script>
+        <script src="../cordova.js"></script>
+
+        <!--Stylesheets-->
+        <link rel="stylesheet" href="../css/jquery.mobile.min.css"/>
+        <link rel="stylesheet" href="../css/kadpoly.min.css"/>
+        <link rel="stylesheet" href="../css/custom.css"/>
+    </head>
+    <body>
+        <!--Page: GPA Calculator-->
+        <div data-role="page" id="gpa" data-theme="b">
+            <header data-role="header" data-position="fixed" data-tap-toggle="false">
+                <a href="#"
+                    data-rel="back"
+                    data-icon="carat-l"
+                    rel="external"
+                    class="ui-btn-left">Back</a>
+                <h1>GPA Calculator</h1>
+            </header>
+            <div data-role="content" data-theme="b">
+
+                <p><b>A = 70 - 100</b></p>
+                <p><b>B = 60 - 69</b></p>
+                <p><b>C = 50 - 59</b></p>
+                <p><b>D = 45 - 49</b></p>
+                <p><b>F = 0 - 44</b></p>
+
+                <form name="classes" method="post" onSubmit="updateCreditsGpa(); return false">
+                    <table border="0" width="auto">
+                        <tbody id="classes_tbody" class="ui-input-text" align="center">
+                            <tr>
+                                <th align="center">Course</th><th align="center">Credit Unit</th><th align="center">Grade</th>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 1" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></div></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 2" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 3" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 4" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 5" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 6" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 7" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 8" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input size="9" placeholder="Course 10" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                                <td><input size="9" onChange="updateCreditsGpa()"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+                <script language="JavaScript">
+                if (document.createElement) {
+                    document.writeln('<input data-inline="true" type="button" value="Add Course" onClick="addNewClass()"><br>');
+                }
+                </script>
+
+                <form name="results" method="post" onSubmit="return false">
+                    <table border="0" width="auto">
+                        <tr>
+                            <td align="left">Total Credits: <input name="total_credits" size="10"></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left">GPA: <input name="gpa" size="10"></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left"><input type="button" value="Calculate my GPA" onClick="updateCreditsGpa()"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+		</div><!--Page-->
+
+    </body>
+</html>

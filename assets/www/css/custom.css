@@ -1,0 +1,80 @@
+body {
+	font-family: "Helvetica", Arial, sans-serif;
+}
+
+#home {
+	text-align: center;
+	background-image: url(../images/au_watermark.png);
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    background-size: 250px;
+}
+
+#au_header{
+	width: 100%;
+	max-width: 400px;
+}
+
+#about h3, hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #006837;
+}
+
+#about a {
+	text-decoration: none;
+}
+
+#get_help h3, hr{
+    margin-bottom: 0px;
+}
+
+
+.grids {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 10px;
+	max-width: 750px;
+}
+
+.grids div { /* all blocks */
+	display: table;
+}
+
+.grids img{ /* all blocks */
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.grids p{ /* all text within block */
+	margin-top: 0px;
+}
+
+.grids div > a { /* all links within block */
+	border-style: solid;
+	border-width: 2px;
+	border-color: #006837;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+    color: black;
+}
+
+
+.ui-block-a {
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.ui-block-b {
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+p {
+    text-decoration: none;
+    color: black;
+}
